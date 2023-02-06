@@ -54,8 +54,8 @@ def seleciona_menu(driver):
 
 
 def seleciona_menu_nfe(driver):
-    driver.find_element(By.XPATH, 
-        '//*[@id="Menu1_MenuPrincipal"]/ul/li[8]/div/span[3]').click()
+    driver.find_element(By.XPATH,
+                        '//*[@id="Menu1_MenuPrincipal"]/ul/li[8]/div/span[3]').click()
 
 
 def selecionar_menu_nota_eletronica(driver, IE, empresa):
@@ -63,8 +63,8 @@ def selecionar_menu_nota_eletronica(driver, IE, empresa):
 
 
 def consulta_nfe(driver):
-    driver.find_element(By.XPATH, 
-        '//*[@id="Menu1_MenuPrincipal"]/ul/li[8]/ul/li[2]/div/a').click()
+    driver.find_element(By.XPATH,
+                        '//*[@id="Menu1_MenuPrincipal"]/ul/li[8]/ul/li[2]/div/a').click()
 
 
 def consulta_nota_eletronica(driver, simples, empresa):
@@ -72,8 +72,8 @@ def consulta_nota_eletronica(driver, simples, empresa):
 
 
 def consulta_cancelamento_exc(driver, intervalo_nf):
-    driver.find_element(By.XPATH, 
-        '//*[@id="Menu1_MenuPrincipal"]/ul/li[8]/ul/li[3]/div/a').click()
+    driver.find_element(By.XPATH,
+                        '//*[@id="Menu1_MenuPrincipal"]/ul/li[8]/ul/li[3]/div/a').click()
 
 
 def consultar_solicitacao_cancelamento(driver, intervalo_nf):
@@ -83,7 +83,7 @@ def consultar_solicitacao_cancelamento(driver, intervalo_nf):
 # mudar_frame
 def switch_frame(driver):
     frame = driver.find_element(By.XPATH,
-        '//*[@id="iframe"]')
+                                '//*[@id="iframe"]')
     driver.switch_to.frame(frame)
 
 
@@ -93,7 +93,7 @@ def mudar_frame(driver):
 
 def switch_relatorio(driver):
     frame = driver.find_element(By.XPATH,
-        '//*[@id="viewer"]')
+                                '//*[@id="viewer"]')
     driver.switch_to.frame(frame)
 
 
@@ -113,9 +113,11 @@ def clicar_na_serie_nota(driver):
     select = Select(driver.find_element(By.ID, 'ddlSerie'))
     select.select_by_value('22')
 
+
 def clicar_na_status_solicitacao(driver):
     select = Select(driver.find_element(By.ID, 'ddlStatusSolicitacao'))
     select.select_by_value('1')
+
 
 def selecionar_serie_nota(driver):
     lancamento_excecao(clicar_na_serie_nota, driver)
@@ -130,8 +132,8 @@ def selecionar_filtros_adicionais(driver):
 
 
 def inserir_data_inicial(driver, dt_inicial):
-    driver.find_element(By.XPATH, 
-        '//*[@id="txtDtEmissaoIni"]').send_keys(dt_inicial)
+    driver.find_element(By.XPATH,
+                        '//*[@id="txtDtEmissaoIni"]').send_keys(dt_inicial)
 
 
 def selecionar_data_inicial(driver, dt_inicial):
@@ -139,8 +141,8 @@ def selecionar_data_inicial(driver, dt_inicial):
 
 
 def inserir_data_final(driver, dt_final):
-    driver.find_element(By.XPATH, 
-        '//*[@id="txtDtEmissaoFim"]').send_keys(dt_final)
+    driver.find_element(By.XPATH,
+                        '//*[@id="txtDtEmissaoFim"]').send_keys(dt_final)
 
 
 def selecionar_data_final(driver, dt_final):
@@ -148,8 +150,8 @@ def selecionar_data_final(driver, dt_final):
 
 
 def clicar_buscar_notas(driver):
-    driver.find_element(By.XPATH, 
-        '//*[@id="btnLocalizar2"]/span').click()
+    driver.find_element(By.XPATH,
+                        '//*[@id="btnLocalizar2"]/span').click()
 
 
 def buscar_notas(driver):
@@ -158,7 +160,7 @@ def buscar_notas(driver):
 
 def clica_entrar_empresa(driver):
     driver.find_element(By.XPATH,
-        '//*[@id="lblNomeEmpresa"]').click()
+                        '//*[@id="lblNomeEmpresa"]').click()
 
 
 def trocar_empresa(driver):
@@ -166,8 +168,8 @@ def trocar_empresa(driver):
 
 
 def clicar_botao_imprimir(driver):
-    driver.find_element(By.XPATH, 
-        '//*[@id="btnImprimir"]/span').click()
+    driver.find_element(By.XPATH,
+                        '//*[@id="btnImprimir"]/span').click()
 
 
 def carregar_tela_impressao():
@@ -192,8 +194,8 @@ def carregar_imprimir_final():
 
 def carregar_tela_nenhum_registro(driver):
     try:
-        driver.find_element(By.XPATH, 
-            '/html/body/div[1]/div/div/div[3]/div/button').click()
+        driver.find_element(By.XPATH,
+                            '/html/body/div[1]/div/div/div[3]/div/button').click()
         return True
     except:
         return False
@@ -315,8 +317,8 @@ def pegar_intervalo_notas_mes(driver):
 
 
 def inserir_num_inicial_exc(driver, num_inicial):
-    driver.find_element(By.XPATH, 
-        '//*[@id="txtNumInicial"]').send_keys(num_inicial)
+    driver.find_element(By.XPATH,
+                        '//*[@id="txtNumInicial"]').send_keys(num_inicial)
 
 
 def inserir_num_inicial(driver, num_inicial):
@@ -325,7 +327,7 @@ def inserir_num_inicial(driver, num_inicial):
 
 def inserir_num_final_exc(driver, num_inicial):
     driver.find_element(By.XPATH,
-        '//*[@id="txtNumFinal"]').send_keys(num_inicial)
+                        '//*[@id="txtNumFinal"]').send_keys(num_inicial)
 
 
 def inserir_num_final(driver, num_inicial):
@@ -380,7 +382,7 @@ def percorrer_guias_notas_canceladas(driver, IE, empresa, caminho, padrao,
             print('herreeee')
             lista_indices_ja_usados = []
             inicio = True
-            while(True):
+            while (True):
                 if inicio:
                     vlr_partida = 1
                     inicio = False
@@ -398,8 +400,8 @@ def percorrer_guias_notas_canceladas(driver, IE, empresa, caminho, padrao,
                         if int(indice) != 0 and (valor not in lista_indices_ja_usados):
                             print(int(indice))
 
-                            driver.find_element(By.XPATH, 
-                                f'//*[@id="dgDocumentos"]/tbody/tr[12]/td/a[{int(indice)}]').click()
+                            driver.find_element(By.XPATH,
+                                                f'//*[@id="dgDocumentos"]/tbody/tr[12]/td/a[{int(indice)}]').click()
 
                             gerar_relatorio_canceladas(
                                 driver, IE, empresa, caminho, padrao,
@@ -459,7 +461,7 @@ def percorrer_menus_servicos_contratados_relatorios(driver, IE, dt_inicial,
             print('passo1')
             lista_indices_ja_usados = []
             inicio = True
-            while(True):
+            while (True):
                 if inicio:
                     vlr_partida = 1
                     inicio = False
@@ -478,8 +480,8 @@ def percorrer_menus_servicos_contratados_relatorios(driver, IE, dt_inicial,
                         if int(indice) != 0 and (valor not in lista_indices_ja_usados):
                             print(f'indice {int(indice)}')
 
-                            driver.find_element(By.XPATH, 
-                                f'//*[@id="dgDocumentos"]/tbody/tr[12]/td/a[{int(indice)}]').click()
+                            driver.find_element(By.XPATH,
+                                                f'//*[@id="dgDocumentos"]/tbody/tr[12]/td/a[{int(indice)}]').click()
 
                             lista_notas.append(
                                 pega_numero_notas_pagina(driver))

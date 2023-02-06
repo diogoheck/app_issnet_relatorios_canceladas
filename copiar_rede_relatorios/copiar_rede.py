@@ -46,7 +46,7 @@ def contratados(empresas, competencia):
             # data = arquivo.split(' ')[-1]
             origem = os.path.join(diretorio, arquivo)
             nome_arquivo = origem.split('\\')[-1]
-            nova_pasta = f'{PASTA_CLIENTES}\\{nome_empresa}\\Dpto Tributário\\2022\\Declarações\\ISSQN\\'
+            nova_pasta = f'{PASTA_CLIENTES}\\{nome_empresa}\\Dpto Tributário\\2023\\Declarações\\ISSQN\\'
             nova_pasta = nova_pasta + competencia
             if not existe_essa_pasta(nova_pasta):
                 criar_nova_pasta(nova_pasta)
