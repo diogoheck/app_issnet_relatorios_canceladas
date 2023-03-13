@@ -116,7 +116,7 @@ def clicar_na_serie_nota(driver):
 
 def clicar_na_status_solicitacao(driver):
     select = Select(driver.find_element(By.ID, 'ddlStatusSolicitacao'))
-    select.select_by_value('1')
+    select.select_by_value('0')
 
 
 def selecionar_serie_nota(driver):
